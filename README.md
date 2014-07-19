@@ -6,9 +6,6 @@ Tired of destroying the Enter key by creating a "void zone" in your terminal so 
 ### Installation:
 ` $ pip install termrule `
 
-### Usage:
-The `color` parameter is optional, if it is not passed, then the default termina color will be used.
-
 ### Supported Colors:
 Below is the list of all color names you can use, if an invalid color is entered, an `InvalidColorException` will be raised.
  - grey
@@ -19,7 +16,10 @@ Below is the list of all color names you can use, if an invalid color is entered
  - magenta
  - cyan
  - white
- 
+
+### Usage:
+The `color` parameter is optional, if it is not passed, then the default termina color will be used.
+
 #### Command Line:
 ```
 usage: hr [-h] [--color COLOR] symbol [symbol ...]
