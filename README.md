@@ -22,7 +22,7 @@ The `color` parameter is optional, if it is not passed, then the default termina
 
 #### Command Line:
 ```
-usage: tr [-h] [--color COLOR] symbol [symbol ...]
+usage: tr [-h] [--color COLOR] [symbol [symbol ...]]
 
 positional arguments:
   symbol         Symbol for horizontal line
@@ -32,14 +32,17 @@ optional arguments:
   --color COLOR  Color of the line
 ```
 ```
-$ tr "#"
+$ tr
 #################################### # Till the end of terminal 
+
+$ tr "&"
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 $ tr "#-#"
 #-##-##-##-##-##-##-##-##-##-##-##- # Till the end of termnial 
 
-$ tr "@" --color red
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ # Till the end of terminal in red color
+$ tr "*-*" --color red
+*-**-**-**-**-**-**-**-**-**-**-**- # Till the end of terminal in red color
 ```
 
 #### Script:
