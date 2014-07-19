@@ -41,8 +41,8 @@ $ hr "@" --color red
 ```
 
 ### Dependencies
-termcolor is the only dependency; it is used for colored outputs
+`termcolor` is the only dependency; it is used for colored outputs
 
 ### License
-termrule is distributed under MIT license, see LICENSE for more details
+`termrule` is distributed under MIT license, see `LICENSE` for more details
 
