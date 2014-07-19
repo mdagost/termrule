@@ -22,7 +22,7 @@ The `color` parameter is optional, if it is not passed, then the default termina
 
 #### Command Line:
 ```
-usage: hr [-h] [--color COLOR] symbol [symbol ...]
+usage: tr [-h] [--color COLOR] symbol [symbol ...]
 
 positional arguments:
   symbol         Symbol for horizontal line
@@ -32,13 +32,13 @@ optional arguments:
   --color COLOR  Color of the line
 ```
 ```
-$ hr "#"
+$ tr "#"
 #################################### # Till the end of terminal 
 
-$ hr "#-#"
+$ tr "#-#"
 #-##-##-##-##-##-##-##-##-##-##-##- # Till the end of termnial 
 
-$ hr "@" --color red
+$ tr "@" --color red
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ # Till the end of terminal in red color
 ```
 
@@ -46,11 +46,13 @@ $ hr "@" --color red
 ```python
 >>> from tr import TermRule
 >>> r = TermRule()
->>> r.hr(["#", "-"], color="cyan")
+>>> r.tr(["#", "-"], color="cyan")
 ##################################### # Till the end of terminal in cyan color
 -------------------------------------
->>> r.hr(["^"])
+>>> r.tr(["^"])
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ # Till the end of terminal in default color
+>>> r.tr(["@-@"])
+@-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@-@@
 ```
 
 ### Dependencies:
