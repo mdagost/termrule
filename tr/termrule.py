@@ -26,7 +26,7 @@ class TermRule(object):
     def parse(self):
         self.parser = argparse.ArgumentParser()
         self.parser.add_argument(
-            "symbol", help="Symbol for horizontal line", nargs="+")
+            "symbol", help="Symbol for horizontal line", nargs="*")
         self.parser.add_argument(
             "--color", help="Color of the line", default=None, nargs=1)
         self.args = self.parser.parse_args()
