@@ -34,7 +34,10 @@ class TermRule(object):
         if color_name is not None:
             color_name = color_name[0]
         symbol = self.args.symbol
-        self.tr(symbol, color_name)
+        try:
+            self.tr(symbol, color_name)
+        except KeyError:
+            print "Invalid Color Name!"
 
     def _ioctl_GWINSZ(self, fd):
         return struct.unpack("hh", fcntl.ioctl(fd, termios.TIOCGWINSZ, "1234"))
