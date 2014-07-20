@@ -18,12 +18,18 @@ class TermRule(object):
 
     @staticmethod
     def _echo(msg, color_name):
+        """
+        Colored outputs to terminal using the termcolor library
+        """
         try:
             return colored(msg, color_name)
         except:
             raise InvalidColorException("Invalid Color Name!")
 
-    def parse(self):
+    def parse_args(self):
+        """
+        Method to parse command line arguments
+        """
         self.parser = argparse.ArgumentParser()
         self.parser.add_argument(
             "symbol", help="Symbol for horizontal line", nargs="*")
@@ -43,7 +49,9 @@ class TermRule(object):
         return struct.unpack("hh", fcntl.ioctl(fd, termios.TIOCGWINSZ, "1234"))
 
     def _term_size(self):
-        # try stdin, stdout, stderr
+        """
+        Method returns lines and columns according to terminal size
+        """
         for fd in (0, 1, 2):
             try:
                 return self._ioctl_GWINSZ(fd)
@@ -72,6 +80,9 @@ class TermRule(object):
         return (25, 80)
 
     def tr(self, args, color=None):
+        """
+        Method to print ASCII patterns to terminal
+        """
         width = self._term_size()[1]
         if not args:
             if color is not None:
@@ -89,8 +100,11 @@ class TermRule(object):
 
 
 def main():
+    """
+    Main function for entry point in setup.py
+    """
     app = TermRule()
-    app.parse()
+    app.parse_args()
 
 if __name__ == "__main__":
     main()
