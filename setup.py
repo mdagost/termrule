@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='termrule',
-    version='0.10',
+    version='0.11',
     py_modules=['termrule'],
     description='Colored Horizontal Rule For Terminal',
     url='http://github.com/itsnauman/termrule',

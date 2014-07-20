@@ -34,7 +34,9 @@ class TermRule(object):
         self.parser.add_argument(
             "symbol", help="Symbol for horizontal line", nargs="*")
         self.parser.add_argument(
-            "--color", help="Color of the line", default=None, nargs=1)
+            "--color", "-c", help="Color of the line", default=None, nargs=1)
+        self.parser.add_argument(
+            "--version", "-v", action="version", version="0.11")
         self.args = self.parser.parse_args()
         color_name = self.args.color
         if color_name is not None:
@@ -101,10 +103,11 @@ class TermRule(object):
 
 def main():
     """
-    Main function for entry point in setup.py
+    Main function for the entry point in setup.py
     """
     app = TermRule()
     app.parse_args()
 
 if __name__ == "__main__":
+    # If this program is run as a script
     main()
