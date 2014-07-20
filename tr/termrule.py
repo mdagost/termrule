@@ -6,22 +6,22 @@ import termios
 import argparse
 
 
-def echo(msg, color_name):
-    try:
-        return colored(msg, color_name)
-    except:
-        raise InvalidColorException("Invalid Color Name!")
-
-
 class InvalidColorException(Exception):
 
     """
-    Exception when invalid color name is entered
+    Exception raised when invalid color name is entered
     """
     pass
 
 
 class TermRule(object):
+
+    @staticmethod
+    def _echo(msg, color_name):
+        try:
+            return colored(msg, color_name)
+        except:
+            raise InvalidColorException("Invalid Color Name!")
 
     def parse(self):
         self.parser = argparse.ArgumentParser()
@@ -36,7 +36,7 @@ class TermRule(object):
         symbol = self.args.symbol
         try:
             self.tr(symbol, color_name)
-        except KeyError:
+        except InvalidColorException:
             print "Invalid Color Name!"
 
     def _ioctl_GWINSZ(self, fd):
@@ -75,15 +75,15 @@ class TermRule(object):
         width = self._term_size()[1]
         if not args:
             if color is not None:
-                print echo("#" * width, color)
+                print self._echo("#" * width, color)
             else:
-                print "#" * width
+                print self._echo("#" * width, "green")
         else:
             for each_symbol in args:
                 chars = len(each_symbol)
                 number_chars = width / chars
                 if color is not None:
-                    print colored(each_symbol * number_chars, color)
+                    print self._echo(each_symbol * number_chars, color)
                 else:
                     print each_symbol * number_chars
 
