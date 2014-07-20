@@ -18,7 +18,7 @@ Below is the list of all color names you can use, if an invalid color is entered
  - white
 
 ### Usage:
-The `color` parameter is optional, if it is not passed, then the default termina color will be used.
+The `color` parameter is optional, if it is not passed, then the default the green color will be used.
 
 #### Command Line:
 ```
