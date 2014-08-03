@@ -37,7 +37,9 @@ $ tr
 
 $ tr "&"
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
+```
+You can also create beautiful ASCII patterns
+```
 $ tr "#-#"
 #-##-##-##-##-##-##-##-##-##-##-##- # Till the end of termnial 
 
