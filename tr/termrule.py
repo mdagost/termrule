@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from termcolor import colored
 import os
 import struct
@@ -45,7 +47,7 @@ class TermRule(object):
         try:
             self.tr(symbol, color_name)
         except InvalidColorException:
-            print "Invalid Color Name!"
+            print("Invalid Color Name!")
 
     def _ioctl_GWINSZ(self, fd):
         return struct.unpack("hh", fcntl.ioctl(fd, termios.TIOCGWINSZ, "1234"))
@@ -88,17 +90,17 @@ class TermRule(object):
         width = self._term_size()[1]
         if not args:
             if color is not None:
-                print self._echo("#" * width, color)
+                print(self._echo("#" * width, color))
             else:
-                print self._echo("#" * width, "green")
+                print(self._echo("#" * width, "green"))
         else:
             for each_symbol in args:
                 chars = len(each_symbol)
                 number_chars = width / chars
                 if color is not None:
-                    print self._echo(each_symbol * number_chars, color)
+                    print(self._echo(each_symbol * number_chars, color))
                 else:
-                    print each_symbol * number_chars
+                    print(each_symbol * number_chars)
 
 
 def main():
