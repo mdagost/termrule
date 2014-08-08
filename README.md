@@ -1,7 +1,7 @@
 `$ termrule_`
 =============
 
-Tired of destroying the Enter key by creating a "void zone" in your terminal so that you can see the error that you're trying to debug? If yes, this is for you. `termrule` allows you to create colored horizontal rule in terminal. Use it in place of the old `<hr />` tag in terminal. This script is inspired from `hr.py` by euangoddard.
+Tired of destroying the Enter key by creating a "void zone" in your terminal so that you can see the error that you're trying to debug? If yes, this is for you. `termrule` allows you to create colored horizontal rule in terminal. Use it in place of the old `<hr />` tag in terminal. This script is inspired from `hr.py` by euangoddard. Works on both Python 2.7 & 3.4
 
 ### Installation:
 ` $ pip install termrule `
