@@ -2,9 +2,9 @@ from setuptools import setup
 
 setup(
     name='termrule',
-    version='0.11',
+    version='0.12',
     py_modules=['termrule'],
-    description='Colored Horizontal Rule For Terminal',
+    description='Coloured Horizontal Rule For Terminal',
     url='http://github.com/itsnauman/termrule',
     author='Nauman Ahmad',
     author_email='nauman-ahmad@outlook.com',
