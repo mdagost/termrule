@@ -1,7 +1,7 @@
 `$ termrule_`
 =============
 
-Tired of destroying the Enter key by creating a "void zone" in your terminal so that you can see the error that you're trying to debug? If yes, this is for you. `termrule` allows you to create colored horizontal rule in terminal. Use it in place of the old `<hr />` tag in terminal. This script is inspired from `hr.py` by euangoddard. Works on both Python 2.7 & 3.4
+Tired of destroying the Enter key by creating a "void zone" in your terminal so that you can see the error that you're trying to debug? If yes, this is for you. `termrule` allows you to create colored horizontal rule in terminal. Use it in place of the old `<hr />` tag in terminal. This script is inspired from `hr.py` by euangoddard. Works on both Python 2.7 & 3.4. *The script is now accessed by `rl` instead of `tr` due to clashes*
 
 ### Installation:
 ` $ pip install termrule `
@@ -22,7 +22,7 @@ The `color` parameter is optional, if it is not passed, then the default the gre
 
 #### Command Line:
 ```
-usage: tr [-h] [--color COLOR] [symbol [symbol ...]]
+usage: rl [-h] [--color COLOR] [symbol [symbol ...]]
 
 positional arguments:
   symbol         Symbol for horizontal line
@@ -32,18 +32,18 @@ optional arguments:
   --color COLOR  Color of the line
 ```
 ```
-$ tr
+$ rl
 #################################### # Till the end of terminal 
 
-$ tr "&"
+$ rl "&"
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 ```
 You can also create beautiful ASCII patterns
 ```
-$ tr "#-#"
+$ rl "#-#"
 #-##-##-##-##-##-##-##-##-##-##-##- # Till the end of termnial 
 
-$ tr "*-*" --color red
+$ rl "*-*" --color red
 *-**-**-**-**-**-**-**-**-**-**-**- # Till the end of terminal in red color
 ```
 
@@ -61,7 +61,7 @@ $ tr "*-*" --color red
 ```
 
 ### Dependencies:
-`termcolor` is the only dependency; it is used for colored outputs, and I hope you know that `python 2.7` is also required (isn't that obvious?)
+`termcolor` is the only dependency; it is used for colored outputs, and I hope you know that `python 2.7` or `python 3.4` is also required (isn't that obvious?)
 
 ### License:
 `termrule` is distributed under MIT license, see `LICENSE` for more details
