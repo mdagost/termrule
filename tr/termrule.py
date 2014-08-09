@@ -38,7 +38,7 @@ class TermRule(object):
         self.parser.add_argument(
             "--color", "-c", help="Color of the line", default=None, nargs=1)
         self.parser.add_argument(
-            "--version", "-v", action="version", version="0.11")
+            "--version", "-v", action="version", version="0.13")
         self.args = self.parser.parse_args()
         color_name = self.args.color
         if color_name is not None:
