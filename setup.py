@@ -16,6 +16,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        rl=tr.termrule:main
+        termrule=tr.termrule:main
     ''',
 )
