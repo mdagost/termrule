@@ -96,7 +96,7 @@ class TermRule(object):
         else:
             for each_symbol in args:
                 chars = len(each_symbol)
-                number_chars = width / chars
+                number_chars = int(width / chars)
                 if color is not None:
                     print(self._echo(each_symbol * number_chars, color))
                 else:
